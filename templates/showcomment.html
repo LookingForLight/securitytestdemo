@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>评论显示页面</title>
+</head>
+<body>
+    <h1>评论内容</h1>
+    {% for item in res_dict %}
+        <div>{{ item|safe}}</div>
+    {% endfor %}
+</body>
+</html>

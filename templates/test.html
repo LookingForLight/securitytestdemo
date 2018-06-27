@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DOM XSS TEST</title>
+</head>
+<body>
+<h1>DOM型</h1>
+<div id="a">
+
+</div>
+<div id="b">
+
+</div>
+<p>将input输入框中输入跳转链接显示到页面</p>
+<input type="text" id="text" value="" />
+<input type="button" id="b" value="test" onclick="test()" />
+<script>
+
+    var pos=document.URL.indexOf("name=")+5;
+    console.log(pos)
+    if (pos > 5){
+        document.getElementById("b").innerHTML = document.URL.substring(pos,document.URL.length)
+    }else {
+
+        document.getElementById("b").innerHTML=""
+    }
+
+{#    document.write(document.URL.substring(pos,document.URL.length))#}
+
+    function test(){
+        var src = document.getElementById("text").value;
+        document.getElementById("a").innerHTML = "<a href='"+src+"'> testLink </a>";
+    }
+</script>
+</body>
+</html>

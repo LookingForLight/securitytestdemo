@@ -1,0 +1,54 @@
+#*.iml
+#.gradle
+#local.properties
+#.idea
+#.DS_Store
+#
+#build/
+#/captures
+#.externalNativeBuild
+#Android_Lib_*
+#Android_TCT_*
+#Android_Plugin_*
+#app/
+#java/
+#build
+#local-config.gradle
+#
+#.DS_Store
+#local.properties
+#local-config.gradle
+#.navigation/
+#build/
+#captures/
+#/Android_Core
+#/Android_Service
+#/Android_DBGenerator
+#app/etongAndroid.keystore
+
+# Android Studio
+*.iml
+.idea
+build/
+captures/
+buildSrc/
+.externalNativeBuild
+.navigation
+
+# Gradle
+.gradle
+local.properties
+
+# Others
+Android_Lib_*
+Android_TCT_*
+Android_Plugin_*
+Android_Client
+Android_Core
+Android_Service
+local-config.gradle
+outer_project.xml
+use-project.gradle
+
+# Mac
+.DS_Store

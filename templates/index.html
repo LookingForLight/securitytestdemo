@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="yes" name="apple-mobile-web-app-capable" />
+    <meta content="black" name="apple-mobile-web-app-status-bar-style" />
+    <meta content="telephone=no" name="format-detection" />
+    <meta content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+    <title>查询</title>
+    <link rel="stylesheet" href="/static/css/index.css">
+</head>
+<body>
+<div id="main">
+    <h1 style="color:red">查询</h1>
+    <div class="login">
+     <form action="" method="POST">
+         userId:<input type= "text" name = "userId" />
+{#        <br>#}
+{#        密  码: <input type="text" name = "password"/>#}
+{#        <br>#}
+        <input type="submit" value="提交"/>
+     </form>
+         <h3>查询结果</h3>
+        {% for item in info %}
+            <div>姓名：{{ item.name }}</div>
+            <div>性别：{{ item.sex }}</div>
+        {% endfor %}
+    </div>
+
+
+
+</div>
+
+
+
+<script src="/static/js/jquery-3.3.1.min.js"></script>
+<script src="/static/js/common.js"></script>
+
+</body>
+</html>

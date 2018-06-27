@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="yes" name="apple-mobile-web-app-capable" />
+    <meta content="black" name="apple-mobile-web-app-status-bar-style" />
+    <meta content="telephone=no" name="format-detection" />
+    <meta content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+    <title>XSSDEmo</title>
+</head>
+<body>
+    <h1>XSS-反射型 demo</h1>
+    <form method="GET" action="">
+        <input type="text" name="xsstest"/>
+        <input type="submit" value="测试"/>
+
+    </form>{{ test }}
+
+    <h1>XSS-贮存型 demo</h1>
+    <form method="POST" action="../comment/">
+
+        <input type="text" name="content"/>
+{#        <textarea rows="3" cols="20" name="content">#}
+{##}
+{#        </textarea>#}
+        <input type="submit" value="提交" />{{ error }}
+
+    </form>
+    <div>{{ success }}</div>
+
+{#    <div>#}
+{#        <h3>大家如何说</h3>#}
+{#        <div id="test"></div>#}
+{#        {% for item in msg %}#}
+{#        <div class="comment">{{ item|safe }}</div>#}
+{#        {% endfor %}#}
+{#    </div>#}
+
+</body>
+</html>

